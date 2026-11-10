@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d6&=j!uq+t-f0@v&(*#&9!_&xf_3l3pqv-9)phbgizjuy#om&6
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['dorost.codev.sbs']
+ALLOWED_HOSTS = ['dorost.codev.sbs', '46.8.101.172', '127.0.0.1', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://dorost.codev.sbs', 'http://dorost.codev.sbs']
 
@@ -43,8 +43,8 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = ('/var/www/dorost/staticfiles/')
+MEDIA_ROOT = ('/var/www/dorost/media/')
 
 STATICFILES_DIRS = [
     BASE_DIR / 'statics',

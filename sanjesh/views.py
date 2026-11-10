@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Sum
-from .models import session
+from .models import session, donator
 
 
 
@@ -16,7 +16,7 @@ def sanjesh(request):
     d = max(best_of_dorost_list_oneday, default=False)
     m = max(best_of_dorost_list_onemin, default=False)
     sessions = session.objects.order_by("sess")
-
+    donations = donator.objects.all()
     context = {
       "alldorost": total_dorost,
       "best_of_dorost": d,
@@ -25,6 +25,7 @@ def sanjesh(request):
       "session_count": sessions.count(),
       "chart_labels": chart_labels,
       "chart_data": chart_data,
+      "donations": donations ,
     }
 
     return render(request, "index.html", context)

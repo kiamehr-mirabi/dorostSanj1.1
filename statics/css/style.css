@@ -72,3 +72,99 @@ body.en .hero,body.en .featured-score{direction:ltr}body.en .score-note{border-i
 .stat-card:nth-child(4) strong {
     color: #ffffff;
 }
+
+.donors-box-wrap {
+      width: min(860px, 100%);
+      margin: 0.95rem auto 0;
+      padding: 0.95rem 1.2rem;
+    }
+
+    .donors-box-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.7rem;
+      padding-bottom: 0.45rem;
+      border-bottom: 1px solid var(--panel-border);
+    }
+
+    .donors-box-head h3 {
+      font-size: 0.9rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .donors-scroll-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem;
+      max-height: 20vh;
+      overflow-y: auto;
+      padding-inline-end: 0.25rem;
+    }
+
+    .donor-item-card {
+      background: var(--panel-bg-elevated);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 0.65rem 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .donor-item-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .donor-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .donor-name {
+      font-weight: 800;
+      font-size: 0.84rem;
+      color: var(--text-main);
+    }
+
+    .donor-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.28rem;
+      background: var(--accent-soft);
+      border: 1px solid var(--panel-border-hover);
+      color: var(--accent);
+      font-family: "JetBrains Mono", "Vazirmatn", monospace;
+      font-size: 0.73rem;
+      font-weight: 700;
+      padding: 0.14rem 0.5rem;
+      border-radius: 7px;
+    }
+
+    .donor-currency {
+      font-size: 0.66rem;
+      color: var(--text-soft);
+      opacity: 0.9;
+    }
+
+    .donor-desc {
+      margin: 0;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      text-align: start;
+    }
+
+    @media (max-width: 768px) {
+      .donors-scroll-grid {
+        grid-template-columns: 1fr;
+        max-height: none;
+      }
+    }
